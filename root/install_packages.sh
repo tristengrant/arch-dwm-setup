@@ -10,7 +10,7 @@ AUDIO_STACK=(pipewire pipewire-jack pipewire-alsa pipewire-pulse wireplumber rtk
 
 CREATIVE_APPS=(darktable inkscape gimp scribus zathura zathura-pdf-poppler reaper sws reapack lsp-plugins-vst3 qpwgraph libwacom xf86-input-wacom)
  
-MEDIA_APPS=(mpd mpc playerctl ncmpcpp mpv steam)
+MEDIA_APPS=(mpd mpc playerctl ncmpcpp mpv steam nsxiv)
 
 DEV_APPS=(tmux neovim)
 
@@ -41,7 +41,7 @@ makepkg -si
 cd /home/tristen//Downloads
 rm -rf paru
 
-paru -S vcvrack-bin dymo-cups-drivers gearlever qimgv jellyfin-media-player
+paru -S vcvrack-bin dymo-cups-drivers gearlever jellyfin-media-player
 
 echo "Cleaning up..."
 sudo pacman -Rns $(pacman -Qdtq) || echo "No orphans to remove."
