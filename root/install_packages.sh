@@ -8,7 +8,7 @@ BASE_PKGS=(base-devel xorg-server xorg-xinit xorg-xrandr xorg-xinput xdg-user-di
 
 WM_PKGS=(libx11 libxft libxinerama libpulse alsa-lib libxrender libxcursor)
 
-IMG_VID_PKGS=(pcmanfm tumbler ffmpegthumbnailer kimageformats zathura zathura-pdf-poppler gvfs mpv nsxiv)
+IMG_VID_PKGS=(pcmanfm tumbler ffmpegthumbnailer zathura zathura-pdf-poppler gvfs mpv nsxiv)
 
 UTILITY_PKGS=(feh libnotify dunst brightnessctl nm-applet cifs-utils smbclient lm_sensors polkit acpi picom j4-dmenu-desktop htop fastfetch xdotool)
 
