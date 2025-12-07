@@ -16,4 +16,6 @@ sudo chown -R tristen:tristen /home/tristen/*
 
 sudo sensors-detect
 
+systemctl enable colord.service
+
 echo "Setup complete! Reboot the computer."
