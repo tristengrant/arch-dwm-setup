@@ -41,7 +41,7 @@ makepkg -si
 cd /home/tristen//Downloads
 rm -rf paru
 
-paru -S vcvrack-bin dymo-cups-drivers gear-lever qimgv jellyfin-media-player
+paru -S vcvrack-bin dymo-cups-drivers gearlever qimgv jellyfin-media-player
 
 echo "Cleaning up..."
 sudo pacman -Rns $(pacman -Qdtq) || echo "No orphans to remove."
