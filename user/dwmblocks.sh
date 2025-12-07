@@ -5,7 +5,7 @@ USER="tristen"
 HOME_DIR="/home/$USER"
 REPO_DIR="$HOME_DIR/Projects/suckless"
 
-cd "$REPO_DIR/dwmblocks-async-desktop"
+cd "$REPO_DIR/dwmblocks-async-laptop"
 make
 sudo make install
 make clean
