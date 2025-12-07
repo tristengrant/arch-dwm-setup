@@ -39,7 +39,7 @@ sudo pacman -S --needed base-devel
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
-cd /home/tristen/?Downloads
+cd /home/tristen//Downloads
 rm -rf paru
 
 paru -S vcvrack-bin dymo-cups-drivers gear-lever qimgv jellyfin-media-player
