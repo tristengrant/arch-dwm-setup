@@ -41,7 +41,7 @@ ln -sf "$HOME_DIR/Projects/dotfiles/config/dunst" "$HOME_DIR/.config/dunst"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/picom" "$HOME_DIR/.config/picom"
 #ln -sf "$HOME_DIR/Projects/dotfiles/config/nvim" "$HOME_DIR/.config/nvim"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/tmux" "$HOME_DIR/.config/tmux"
-ln -sf "$HOME_DIR/Projects/dotfiles/config/qimgv" "$HOME_DIR/.config/qimgv"
+#ln -sf "$HOME_DIR/Projects/dotfiles/config/qimgv" "$HOME_DIR/.config/qimgv"
 
 # In home directory
 ln -sf "$HOME_DIR/Projects/dotfiles/dot_xinitrc" "$HOME_DIR/.xinitrc"
@@ -50,7 +50,7 @@ ln -sf "$HOME_DIR/Projects/dotfiles/dot_bash_profile" "$HOME_DIR/.bash_profile"
 ln -sf "$HOME_DIR/Projects/dotfiles/dot_xprofile" "$HOME_DIR/.xprofile"
 
 # In .local/share/applications
-ln -sf "$HOME_DIR/Projects/dotfiles/local/share/application/qimgv.desktop" "$HOME_DIR/.local/share/applications/qimgv.desktop"
+ln -sf "$HOME_DIR/Projects/dotfiles/local/share/application/nsxiv.desktop" "$HOME_DIR/.local/share/applications/nsxiv.desktop"
 ln -sf "$HOME_DIR/Projects/dotfiles/local/share/applications/neovim.desktop" "$HOME_DIR/.local/share/applications/neovim.desktop"
 ln -sf "$HOME_DIR/Projects/dotfiles/local/share/applications/st.desktop" "$HOME_DIR/.local/share/applications/st.desktop"
 
