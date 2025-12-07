@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
 
 # Root-level tasks
-./root/install_packages.sh
-sudo ./root/create_groups.sh
-sudo ./root/enable_services.sh
-sudo ./root/mount_music.sh
+./root/laptop-install-packages.sh
+sudo ./root/create-groups.sh
+sudo ./root/enable-services.sh
 
 # User-level tasks
 ./user/dotfiles.sh
 ./user/suckless.sh
-./user/dwmblocks.sh
+./user/laptop-dwmblocks.sh
 ./user/theme.sh
 
 sudo chown -R tristen:tristen /home/tristen/*
