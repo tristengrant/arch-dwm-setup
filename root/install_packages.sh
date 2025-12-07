@@ -4,7 +4,7 @@ sudo pacman -Syu --noconfirm
 
 echo "Installing essential system packages..."
 
-BASE_PKGS=(base-devel linux-zen linux-zen-headers libx11 libxft libxinerama libpulse alsa-lib libxrender libxcursor xorg-server xorg-xinit xorg-xrandr xorg-xinput mesa xf86-video-intel pcmanfm syncthing xclip xdotool feh dunst breeze-gtk breeze5 adwaita-icon-theme adwaita-cursors picom woff2-font-awesome noto-fonts-emoji ttf-noto-nerd ttf-jetbrains-mono-nerd libnotify brightnessctl networkmanager cifs-utils smbclient lm_sensors jq zstd 7zip tar unrar file-roller scrot imagemagick htop tumbler ffmpegthumbnailer kimageformats polkit acpi hugo fastfetch firefox firefox-i18n-en-ca qutebrowser python-adblock harper hunspell hunspell-en_ca filezilla displaycal colord fzf reflector j4-dmenu-desktop xdg-user-dirs gvfs)
+BASE_PKGS=(base-devel linux-zen linux-zen-headers libx11 libxft libxinerama libpulse alsa-lib libxrender libxcursor xorg-server xorg-xinit xorg-xrandr xorg-xinput mesa xf86-video-intel pcmanfm syncthing xclip xdotool feh dunst breeze-gtk breeze5 adwaita-icon-theme adwaita-cursors picom woff2-font-awesome noto-fonts-emoji ttf-noto-nerd ttf-jetbrains-mono-nerd libnotify brightnessctl networkmanager nm-applet cifs-utils smbclient lm_sensors jq zstd 7zip tar unrar file-roller scrot imagemagick htop tumbler ffmpegthumbnailer kimageformats polkit acpi hugo fastfetch firefox firefox-i18n-en-ca qutebrowser python-adblock harper hunspell hunspell-en_ca filezilla displaycal colord fzf reflector j4-dmenu-desktop xdg-user-dirs gvfs)
 
 AUDIO_STACK=(pipewire pipewire-jack pipewire-alsa pipewire-pulse wireplumber rtkit alsa-utils pavucontrol)
 
