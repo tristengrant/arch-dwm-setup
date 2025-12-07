@@ -41,5 +41,6 @@ build_component() {
 build_component "dwm"
 build_component "dmenu"
 build_component "slock"
+build_component "st-0.8.5"
 
 echo "All suckless software built and installed successfully."
