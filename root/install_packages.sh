@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+.#!/usr/bin/env bash
 set -e
 
 sudo pacman -Syu --noconfirm
@@ -17,28 +17,29 @@ DEV_APPS=(tmux neovim)
 
 PRINTING=(cups cups-pdf cups-filters system-config-printer avahi glabels)
 
-sudo pacman -S --noconfirm "${BASE_PKGS[@]}" || echo "WARNING: Some base packages could not be installed."
+sudo pacman -S "${BASE_PKGS[@]}" || echo "WARNING: Some base packages could not be installed."
 
-sudo pacman -S --noconfirm "${AUDIO_STACK[@]}" || echo "WARNING: Some audio packages could not be installed."
+sudo pacman -S "${AUDIO_STACK[@]}" || echo "WARNING: Some audio packages could not be installed."
 
-sudo pacman -S --noconfirm "${CREATIVE_APPS[@]}" || echo "WARNING: Some creative packages could not be installed."
+sudo pacman -S "${CREATIVE_APPS[@]}" || echo "WARNING: Some creative packages could not be installed."
 
-sudo pacman -S --noconfirm "${MEDIA_APPS[@]}" || echo "WARNING: Some media packages could not be installed."
+sudo pacman -S "${MEDIA_APPS[@]}" || echo "WARNING: Some media packages could not be installed."
 
-sudo pacman -S --noconfirm "${DEV_APPS[@]}" || echo "WARNING: Some dev packages could not be installed."
+sudo pacman -S "${DEV_APPS[@]}" || echo "WARNING: Some dev packages could not be installed."
 
-sudo pacman -S --noconfirm "${PRINTING[@]}" || echo "WARNING: Some printing packages could not be installed."
+sudo pacman -S "${PRINTING[@]}" || echo "WARNING: Some printing packages could not be installed."
 
 echo "Refreshing font cache..."
 fc-cache -fv
 
 echo "Installing Paru AUR helper..."
-cd "$HOME/Downloads"
+mkdir -p /home/tristen/Downloads
+cd /home/tristen/Downloads
 sudo pacman -S --needed base-devel
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
-cd "$HOME/Downloads"
+cd /home/tristen/?Downloads
 rm -rf paru
 
 paru -S vcvrack-bin dymo-cups-drivers gear-lever qimgv jellyfin-media-player
