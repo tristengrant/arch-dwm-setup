@@ -4,19 +4,69 @@ sudo pacman -Syu --noconfirm
 
 echo "Installing packages..."
 
-sudo pacman -S --needed --noconfirm --ask 4 base-devel linux-zen linux-zen-headers libx11 libxft libxinerama libpulse alsa-lib libxrender libxcursor xorg-server xorg-xinit xorg-xrandr xorg-xinput pcmanfm syncthing xclip xdotool feh dunst breeze-gtk breeze5 adwaita-icon-theme adwaita-cursors picom woff2-font-awesome noto-fonts-emoji ttf-noto-nerd ttf-jetbrains-mono-nerd libnotify brightnessctl networkmanager nm-applet cifs-utils smbclient lm_sensors jq zstd p7zip tar unrar file-roller scrot imagemagick htop tumbler ffmpegthumbnailer polkit acpi hugo fastfetch firefox firefox-i18n-en-ca qutebrowser python-adblock harper hunspell hunspell-en_ca filezilla displaycal colord fzf reflector j4-dmenu-desktop xdg-user-dirs gvfs bitwarden
+BASE_PKGS=(base-devel xorg-server xorg-xinit xorg-xrandr xorg-xinput xdg-user-dirs)
 
-sudo pacman -S --needed --noconfirm --ask 4 pipewire pipewire-jack pipewire-alsa pipewire-pulse wireplumber rtkit alsa-utils pavucontrol
+WM_PKGS=(libx11 libxft libxinerama libpulse alsa-lib libxrender libxcursor)
 
-sudo pacman -S --needed --noconfirm --ask 4 inkscape gimp scribus zathura zathura-pdf-poppler reaper reapack lsp-plugins-vst3 qpwgraph libwacom xf86-input-wacom
+IMG_VID_PKGS=(pcmanfm tumbler ffmpegthumbnailer kimageformats zathura zathura-pdf-poppler gvfs mpv nsxiv)
+
+UTILITY_PKGS=(feh libnotify dunst brightnessctl nm-applet cifs-utils smbclient lm_sensors polkit acpi picom j4-dmenu-desktop htop fastfetch xdotool)
+
+FILE_PKGS=(filezilla syncthing displaycal colord reflector harper hunspell hunspell-en_ca p7zip tar unrar file-roller scrot imagemagick xclip)
+
+THEME_PKGS=(breeze-gtk breeze5 adwaita-icon-theme adwaita-cursors)
+
+FONT_PKGS=(woff2-font-awesome noto-fonts-emoji ttf-noto-nerd ttf-jetbrains-mono-nerd)
+
+FIREFOX_PKGS=(firefox firefox-i18n-en-ca)
+
+QUTEBROWSER_PKGS=(qutebrowser python-adblock)
+
+AUDIOSTACK_PKGS=(pipewire pipewire-jack pipewire-alsa pipewire-pulse wireplumber rtkit alsa-utils pavucontrol)
+
+DRAWING_PKGS=(inkscape gimp scribus libwacom xf86-input-wacom)
+
+RECORDING_PKGS=(reaper reapack lsp-plugins-vst3 qpwgraph)
  
-sudo pacman -S --needed --noconfirm --ask 4 mpd mpc playerctl ncmpcpp mpv nsxiv
+AUDIOCTRL_PKGS=(mpd mpc playerctl ncmpcpp)
 
-sudo pacman -S --needed --noconfirm --ask 4 steam
+GAMING_PKGS=(steam)
 
-sudo pacman -S --needed --noconfirm --ask 4 tmux neovim
+DEV_PKGS=(tmux neovim jq hugo fzf)
 
-sudo pacman -S --needed --noconfirm --ask 4 cups cups-pdf cups-filters system-config-printer avahi glabels
+PRINTING_PKGS=(cups cups-pdf cups-filters system-config-printer avahi glabels)
+
+sudo pacman -S --needed --noconfirm --ask 4 "${BASE_PKGS[@]}" || echo "WARNING: Some base packages could not be installed."
+
+sudo pacman -S --needed --noconfirm --ask 4 "${WM_PKGS[@]}" || echo "WARNING: Some window management packages could not be installed."
+
+sudo pacman -S --needed --noconfirm --ask 4 "${IMG_VID_PKGS[@]}" || echo "WARNING: Some image/video packages could not be installed."
+
+sudo pacman -S --needed --noconfirm --ask 4 "${UTILITY_PKGS[@]}" || echo "WARNING: Some utility packages could not be installed."
+
+sudo pacman -S --needed --noconfirm --ask 4 "${FILE_PKGS[@]}" || echo "WARNING: Some file packages could not be installed."
+
+sudo pacman -S --needed --noconfirm --ask 4 "${THEME_PKGS[@]}" || echo "WARNING: Some theme packages could not be installed."
+
+sudo pacman -S --needed --noconfirm --ask 4 "${FONT_PKGS[@]}" || echo "WARNING: Some font packages could not be installed."
+
+sudo pacman -S --needed --noconfirm --ask 4 "${FIREFOX_PKGS[@]}" || echo "WARNING: Some firefox packages could not be installed."
+
+sudo pacman -S --needed --noconfirm --ask 4 "${QUTEBROWSER_PKGS[@]}" || echo "WARNING: Some qutebrowser packages could not be installed."
+
+sudo pacman -S --needed --noconfirm --ask 4 "${AUDIOSTACK_PKGS[@]}" || echo "WARNING: Some audio stack packages ould not be installed."
+
+sudo pacman -S --needed --noconfirm --ask 4 "${DRAWING_PKGS[@]}" || echo "WARNING: Some drawing packages could not be installed."
+
+sudo pacman -S --needed --noconfirm --ask 4 "${RECORDING_PKGS[@]}" || echo "WARNING: Some recording packages could not be installed."
+
+sudo pacman -S --needed --noconfirm --ask 4 "${AUDIOCTRL_PKGS[@]}" || echo "WARNING: Some audio control packages could not be installed."
+
+sudo pacman -S --needed --noconfirm --ask 4 "${GAMING_PKGS[@]}" || echo "WARNING: Some gaming packages could not be installed."
+
+sudo pacman -S --needed --noconfirm --ask 4 "${DEV_PKGS[@]}" || echo "WARNING: Some web development packages could not be installed."
+
+sudo pacman -S --needed --noconfirm --ask 4 "${PRINTING_PKGS[@]}" || echo "WARNING: Some printing packages could not be installed."
 
 echo "Refreshing font cache..."
 fc-cache -fv
