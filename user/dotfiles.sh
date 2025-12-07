@@ -40,16 +40,13 @@ ln -sf "$HOME_DIR/Projects/dotfiles/config/mpd" "$HOME_DIR/.config/mpd"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/dunst" "$HOME_DIR/.config/dunst"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/picom" "$HOME_DIR/.config/picom"
 #ln -sf "$HOME_DIR/Projects/dotfiles/config/nvim" "$HOME_DIR/.config/nvim"
-ln -sf "$HOME_DIR/Projects/dotfiles/config/gtk-3.0" "$HOME_DIR/.config/gtk-3.0"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/tmux" "$HOME_DIR/.config/tmux"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/qimgv" "$HOME_DIR/.config/qimgv"
-ln -sf "$HOME_DIR/Projects/dotfiles/config/mimeapps.list" "$HOME_DIR/.config/mimeapps.list"
 
 # In home directory
-ln -sf "$HOME_DIR/Projects/dotfiles/desktop_dot_xinitrc" "$HOME_DIR/.xinitrc"
+ln -sf "$HOME_DIR/Projects/dotfiles/dot_xinitrc" "$HOME_DIR/.xinitrc"
 ln -sf "$HOME_DIR/Projects/dotfiles/dot_bashrc" "$HOME_DIR/.bashrc"
-ln -sf "$HOME_DIR/Projects/dotfiles/dot_bash_aliases" "$HOME_DIR/.bash_aliases"
-ln -sf "$HOME_DIR/Projects/dotfiles/dot_profile" "$HOME_DIR/.profile"
+ln -sf "$HOME_DIR/Projects/dotfiles/dot_bash_profile" "$HOME_DIR/.bash_profile"
 ln -sf "$HOME_DIR/Projects/dotfiles/dot_xprofile" "$HOME_DIR/.xprofile"
 
 # In .local/share/applications
