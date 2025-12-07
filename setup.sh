@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-set -euo pipefail
 
 # Root-level tasks
-sudo ./root/install_packages.sh
+./root/install_packages.sh
 sudo ./root/create_groups.sh
 sudo ./root/enable_services.sh
 sudo ./root/mount_music.sh
