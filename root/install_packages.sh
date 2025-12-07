@@ -8,9 +8,11 @@ BASE_PKGS=(base-devel linux-zen linux-zen-headers libx11 libxft libxinerama libp
 
 AUDIO_STACK=(pipewire pipewire-jack pipewire-alsa pipewire-pulse wireplumber rtkit alsa-utils pavucontrol)
 
-CREATIVE_APPS=(inkscape gimp scribus zathura zathura-pdf-poppler reaper sws reapack lsp-plugins-vst3 qpwgraph libwacom xf86-input-wacom)
+CREATIVE_APPS=(inkscape gimp scribus zathura zathura-pdf-poppler reaper reapack lsp-plugins-vst3 qpwgraph libwacom xf86-input-wacom)
  
-MEDIA_APPS=(mpd mpc playerctl ncmpcpp mpv steam nsxiv)
+MEDIA_APPS=(mpd mpc playerctl ncmpcpp mpv nsxiv)
+
+GAMING=(steam)
 
 DEV_APPS=(tmux neovim)
 
@@ -23,6 +25,8 @@ sudo pacman -S "${AUDIO_STACK[@]}" || echo "WARNING: Some audio packages could n
 sudo pacman -S "${CREATIVE_APPS[@]}" || echo "WARNING: Some creative packages could not be installed."
 
 sudo pacman -S "${MEDIA_APPS[@]}" || echo "WARNING: Some media packages could not be installed."
+
+sudo pacman -S "${GAMING[@]}" || echo "WARNING: Some gaming packages could not be installed."
 
 sudo pacman -S "${DEV_APPS[@]}" || echo "WARNING: Some dev packages could not be installed."
 
