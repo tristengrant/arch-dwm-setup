@@ -36,37 +36,37 @@ DEV_PKGS=(tmux neovim jq hugo fzf)
 
 PRINTING_PKGS=(cups cups-pdf cups-filters system-config-printer avahi glabels)
 
-sudo pacman -S --needed --noconfirm --ask 4 "${BASE_PKGS[@]}" || echo "WARNING: Some base packages could not be installed."
+sudo pacman -S --needed "${BASE_PKGS[@]}" || echo "WARNING: Some base packages could not be installed."
 
-sudo pacman -S --needed --noconfirm --ask 4 "${WM_PKGS[@]}" || echo "WARNING: Some window management packages could not be installed."
+sudo pacman -S --needed "${WM_PKGS[@]}" || echo "WARNING: Some window management packages could not be installed."
 
-sudo pacman -S --needed --noconfirm --ask 4 "${IMG_VID_PKGS[@]}" || echo "WARNING: Some image/video packages could not be installed."
+sudo pacman -S --needed "${IMG_VID_PKGS[@]}" || echo "WARNING: Some image/video packages could not be installed."
 
-sudo pacman -S --needed --noconfirm --ask 4 "${UTILITY_PKGS[@]}" || echo "WARNING: Some utility packages could not be installed."
+sudo pacman -S --needed "${UTILITY_PKGS[@]}" || echo "WARNING: Some utility packages could not be installed."
 
-sudo pacman -S --needed --noconfirm --ask 4 "${FILE_PKGS[@]}" || echo "WARNING: Some file packages could not be installed."
+sudo pacman -S --needed "${FILE_PKGS[@]}" || echo "WARNING: Some file packages could not be installed."
 
-sudo pacman -S --needed --noconfirm --ask 4 "${THEME_PKGS[@]}" || echo "WARNING: Some theme packages could not be installed."
+sudo pacman -S --needed "${THEME_PKGS[@]}" || echo "WARNING: Some theme packages could not be installed."
 
-sudo pacman -S --needed --noconfirm --ask 4 "${FONT_PKGS[@]}" || echo "WARNING: Some font packages could not be installed."
+sudo pacman -S --needed "${FONT_PKGS[@]}" || echo "WARNING: Some font packages could not be installed."
 
-sudo pacman -S --needed --noconfirm --ask 4 "${FIREFOX_PKGS[@]}" || echo "WARNING: Some firefox packages could not be installed."
+sudo pacman -S --needed "${FIREFOX_PKGS[@]}" || echo "WARNING: Some firefox packages could not be installed."
 
-sudo pacman -S --needed --noconfirm --ask 4 "${QUTEBROWSER_PKGS[@]}" || echo "WARNING: Some qutebrowser packages could not be installed."
+sudo pacman -S --needed "${QUTEBROWSER_PKGS[@]}" || echo "WARNING: Some qutebrowser packages could not be installed."
 
-sudo pacman -S --needed --noconfirm --ask 4 "${AUDIOSTACK_PKGS[@]}" || echo "WARNING: Some audio stack packages ould not be installed."
+sudo pacman -S --needed "${AUDIOSTACK_PKGS[@]}" || echo "WARNING: Some audio stack packages ould not be installed."
 
-sudo pacman -S --needed --noconfirm --ask 4 "${DRAWING_PKGS[@]}" || echo "WARNING: Some drawing packages could not be installed."
+sudo pacman -S --needed "${DRAWING_PKGS[@]}" || echo "WARNING: Some drawing packages could not be installed."
 
-sudo pacman -S --needed --noconfirm --ask 4 "${RECORDING_PKGS[@]}" || echo "WARNING: Some recording packages could not be installed."
+sudo pacman -S --needed "${RECORDING_PKGS[@]}" || echo "WARNING: Some recording packages could not be installed."
 
-sudo pacman -S --needed --noconfirm --ask 4 "${AUDIOCTRL_PKGS[@]}" || echo "WARNING: Some audio control packages could not be installed."
+sudo pacman -S --needed "${AUDIOCTRL_PKGS[@]}" || echo "WARNING: Some audio control packages could not be installed."
 
-sudo pacman -S --needed --noconfirm --ask 4 "${GAMING_PKGS[@]}" || echo "WARNING: Some gaming packages could not be installed."
+sudo pacman -S --needed "${GAMING_PKGS[@]}" || echo "WARNING: Some gaming packages could not be installed."
 
-sudo pacman -S --needed --noconfirm --ask 4 "${DEV_PKGS[@]}" || echo "WARNING: Some web development packages could not be installed."
+sudo pacman -S --needed "${DEV_PKGS[@]}" || echo "WARNING: Some web development packages could not be installed."
 
-sudo pacman -S --needed --noconfirm --ask 4 "${PRINTING_PKGS[@]}" || echo "WARNING: Some printing packages could not be installed."
+sudo pacman -S --needed "${PRINTING_PKGS[@]}" || echo "WARNING: Some printing packages could not be installed."
 
 echo "Refreshing font cache..."
 fc-cache -fv
