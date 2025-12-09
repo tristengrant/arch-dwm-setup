@@ -6,7 +6,7 @@ HOME_DIR="/home/$USER"
 
 mkdir -p "$HOME_DIR/.config"
 
-cat > "$HOME_DIR/.config/user-dirs.dirs" <<'EOF'
+cat >"$HOME_DIR/.config/user-dirs.dirs" <<'EOF'
 XDG_DESKTOP_DIR="/home/tristen"
 XDG_DOCUMENTS_DIR="/home/tristen/Documents"
 XDG_DOWNLOAD_DIR="/home/tristen/Downloads"
@@ -39,7 +39,7 @@ ln -sf "$HOME_DIR/Projects/dotfiles/config/mpv" "$HOME_DIR/.config/mpv"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/mpd" "$HOME_DIR/.config/mpd"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/dunst" "$HOME_DIR/.config/dunst"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/picom" "$HOME_DIR/.config/picom"
-#ln -sf "$HOME_DIR/Projects/dotfiles/config/nvim" "$HOME_DIR/.config/nvim"
+ln -sf "$HOME_DIR/Projects/dotfiles/config/nvim" "$HOME_DIR/.config/nvim"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/tmux" "$HOME_DIR/.config/tmux"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/nsxiv" "$HOME_DIR/.config/nsxiv"
 
