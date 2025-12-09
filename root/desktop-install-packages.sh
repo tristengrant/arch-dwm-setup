@@ -32,7 +32,7 @@ AUDIOCTRL_PKGS=(mpd mpc playerctl ncmpcpp)
 
 GAMING_PKGS=(steam)
 
-DEV_PKGS=(tmux neovim jq hugo fzf ripgrep fd gopls yaml-language-server bash-language-server eslint-language-server)
+DEV_PKGS=(tmux neovim jq hugo fzf ripgrep fd)
 
 PRINTING_PKGS=(cups cups-pdf cups-filters system-config-printer avahi glabels)
 
@@ -81,7 +81,7 @@ makepkg -si
 cd /home/tristen/Downloads
 rm -rf paru
 
-paru -S vcvrack-bin dymo-cups-drivers gearlever kanata-bin
+paru -S vcvrack-bin dymo-cups-drivers gearlever
 
 echo "Cleaning up..."
 sudo pacman -Rns $(pacman -Qdtq) || echo "No orphans to remove."
