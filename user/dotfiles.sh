@@ -42,6 +42,7 @@ ln -sf "$HOME_DIR/Projects/dotfiles/config/picom" "$HOME_DIR/.config/picom"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/nvim" "$HOME_DIR/.config/nvim"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/tmux" "$HOME_DIR/.config/tmux"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/nsxiv" "$HOME_DIR/.config/nsxiv"
+ln -sf "$HOME_DIR/Projects/dotfiles/config/kanata" "$HOME_DIR/.config/kanata"
 
 # In home directory
 ln -sf "$HOME_DIR/Projects/dotfiles/dot_xinitrc" "$HOME_DIR/.xinitrc"

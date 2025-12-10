@@ -70,4 +70,19 @@ paru -S gearlever kanata-bin
 echo "Cleaning up..."
 sudo pacman -Rns $(pacman -Qdtq) || echo "No orphans to remove."
 
+# Setting up Kanata for keyboard remapping on Laptop
+sudo groupadd --system uinput
+sudo groupdel uinput
+sudo usermod -aG input $USER
+sudo usermod -aG uinput $USER
+mkdir -p /etc/udev/rules.d/
+
+# Writing udev rules for Kanata
+sudo cat <<EOF > "etc/udev/rules.d/99-input.rules"
+KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
+EOF
+
+# Reload udev rules
+sudo udevadm control --reload-rules && sudo udevadm trigger
+
 echo "Package installation complete!"
