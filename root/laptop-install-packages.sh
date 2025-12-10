@@ -24,7 +24,7 @@ QUTEBROWSER_PKGS=(qutebrowser python-adblock)
 
 AUDIOSTACK_PKGS=(pipewire pipewire-alsa pipewire-pulse wireplumber rtkit alsa-utils pavucontrol)
 
-DEV_PKGS=(tmux neovim jq hugo fzf ripgrep fd)
+DEV_PKGS=(tmux neovim jq hugo fzf ripgrep fd bash-language-server stylua lua-language-server)
 
 PRINTING_PKGS=(cups cups-pdf cups-filters system-config-printer avahi)
 
@@ -78,7 +78,7 @@ sudo usermod -aG uinput $USER
 mkdir -p /etc/udev/rules.d/
 
 # Writing udev rules for Kanata
-sudo cat <<EOF > "etc/udev/rules.d/99-input.rules"
+sudo cat <<EOF >"etc/udev/rules.d/99-input.rules"
 KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
 EOF
 

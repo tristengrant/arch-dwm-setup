@@ -32,7 +32,7 @@ AUDIOCTRL_PKGS=(mpd mpc playerctl ncmpcpp)
 
 GAMING_PKGS=(steam)
 
-DEV_PKGS=(tmux neovim jq hugo fzf ripgrep fd)
+DEV_PKGS=(tmux neovim jq hugo fzf ripgrep fd bash-language-server stylua lua-language-server)
 
 PRINTING_PKGS=(cups cups-pdf cups-filters system-config-printer avahi glabels)
 
