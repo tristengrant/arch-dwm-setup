@@ -19,6 +19,7 @@ EOF
 
 echo "Making home directories..."
 mkdir -p "$HOME_DIR/Documents"
+mkdir -p "$HOME_DIR/Documents/notes"
 mkdir -p "$HOME_DIR/Downloads"
 mkdir -p "$HOME_DIR/Music"
 mkdir -p "$HOME_DIR/Pictures"
@@ -54,6 +55,9 @@ ln -sf "$HOME_DIR/Projects/dotfiles/dot_xprofile" "$HOME_DIR/.xprofile"
 ln -sf "$HOME_DIR/Projects/dotfiles/local/share/application/nsxiv.desktop" "$HOME_DIR/.local/share/applications/nsxiv.desktop"
 ln -sf "$HOME_DIR/Projects/dotfiles/local/share/applications/neovim.desktop" "$HOME_DIR/.local/share/applications/neovim.desktop"
 ln -sf "$HOME_DIR/Projects/dotfiles/local/share/applications/st.desktop" "$HOME_DIR/.local/share/applications/st.desktop"
+
+# Telekasten NeoVim Plugin Templates
+ln -sf "$HOME_DIR/Projects/dotfiles/telekasten-nvim/templates" "$HOME_DIR/Documents/notes"
 
 source /home/tristen/.bashrc
 
