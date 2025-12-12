@@ -20,8 +20,6 @@ FONT_PKGS=(woff2-font-awesome noto-fonts-emoji ttf-noto-nerd ttf-jetbrains-mono-
 
 FIREFOX_PKGS=(firefox firefox-i18n-en-ca)
 
-QUTEBROWSER_PKGS=(qutebrowser python-adblock)
-
 AUDIOSTACK_PKGS=(pipewire pipewire-jack pipewire-alsa pipewire-pulse wireplumber rtkit alsa-utils pavucontrol)
 
 DRAWING_PKGS=(inkscape gimp scribus libwacom xf86-input-wacom)
@@ -51,8 +49,6 @@ sudo pacman -S --needed "${THEME_PKGS[@]}" || echo "WARNING: Some theme packages
 sudo pacman -S --needed "${FONT_PKGS[@]}" || echo "WARNING: Some font packages could not be installed."
 
 sudo pacman -S --needed "${FIREFOX_PKGS[@]}" || echo "WARNING: Some firefox packages could not be installed."
-
-sudo pacman -S --needed "${QUTEBROWSER_PKGS[@]}" || echo "WARNING: Some qutebrowser packages could not be installed."
 
 sudo pacman -S --needed "${AUDIOSTACK_PKGS[@]}" || echo "WARNING: Some audio stack packages ould not be installed."
 
