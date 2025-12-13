@@ -55,13 +55,13 @@ echo "Installing Paru AUR helper..."
 mkdir -p /home/tristen/Downloads
 cd /home/tristen/Downloads
 sudo pacman -S --needed base-devel
-git clone https://aur.archlinux.org/paru.git
-cd paru
+git clone https://aur.archlinux.org/yay.git
+cd yay
 makepkg -si
 cd /home/tristen/Downloads
-rm -rf paru
+rm -rf yay
 
-paru -S gearlever kanata-bin
+yay -S gearlever kanata-bin
 
 echo "Cleaning up..."
 sudo pacman -Rns $(pacman -Qdtq) || echo "No orphans to remove."
