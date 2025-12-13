@@ -30,7 +30,7 @@ AUDIOCTRL_PKGS=(mpd mpc playerctl ncmpcpp)
 
 GAMING_PKGS=(steam)
 
-DEV_PKGS=(tmux neovim jq hugo fzf ripgrep fd bash-language-server stylua lua-language-server)
+DEV_PKGS=(tmux neovim jq hugo fzf ripgrep fd)
 
 PRINTING_PKGS=(cups cups-pdf cups-filters system-config-printer avahi glabels)
 
@@ -67,7 +67,7 @@ sudo pacman -S --needed "${PRINTING_PKGS[@]}" || echo "WARNING: Some printing pa
 echo "Refreshing font cache..."
 fc-cache -fv
 
-echo "Installing Paru AUR helper..."
+echo "Installing Yay AUR helper..."
 mkdir -p /home/tristen/Downloads
 cd /home/tristen/Downloads
 sudo pacman -S --needed base-devel
@@ -76,6 +76,7 @@ cd yay
 makepkg -si
 cd /home/tristen/Downloads
 rm -rf yay
+rm -rf ~/go
 
 yay -S vcvrack-bin dymo-cups-drivers gearlever vial-appimage winboat
 

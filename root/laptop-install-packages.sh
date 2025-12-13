@@ -22,7 +22,7 @@ FIREFOX_PKGS=(firefox firefox-i18n-en-ca)
 
 AUDIOSTACK_PKGS=(pipewire pipewire-alsa pipewire-pulse wireplumber rtkit alsa-utils pavucontrol)
 
-DEV_PKGS=(tmux neovim jq hugo fzf ripgrep fd bash-language-server stylua lua-language-server)
+DEV_PKGS=(tmux neovim jq hugo fzf ripgrep fd)
 
 PRINTING_PKGS=(cups cups-pdf cups-filters system-config-printer avahi)
 
@@ -60,6 +60,7 @@ cd yay
 makepkg -si
 cd /home/tristen/Downloads
 rm -rf yay
+rm -rf ~/go
 
 yay -S gearlever kanata-bin
 
