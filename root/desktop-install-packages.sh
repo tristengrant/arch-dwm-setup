@@ -10,7 +10,7 @@ WM_PKGS=(libx11 libxft libxinerama libpulse alsa-lib libxrender libxcursor)
 
 IMG_VID_PKGS=(pcmanfm lf tumbler ffmpegthumbnailer zathura zathura-pdf-poppler gvfs mpv nsxiv)
 
-UTILITY_PKGS=(feh libnotify dunst brightnessctl cifs-utils smbclient lm_sensors polkit acpi picom j4-dmenu-desktop htop fastfetch xdotool ufw)
+UTILITY_PKGS=(feh libnotify dunst brightnessctl cifs-utils smbclient lm_sensors polkit polkit-gnome acpi picom j4-dmenu-desktop htop fastfetch xdotool ufw)
 
 FILE_PKGS=(filezilla syncthing displaycal colord reflector harper hunspell hunspell-en_ca p7zip tar unrar file-roller scrot imagemagick xclip)
 
@@ -78,7 +78,7 @@ cd /home/tristen/Downloads
 rm -rf yay
 rm -rf ~/go
 
-yay -S vcvrack-bin dymo-cups-drivers gearlever vial-appimage winboat
+yay -S vcvrack-bin dymo-cups-drivers gearlever via-bin winboat
 
 echo "Cleaning up..."
 sudo pacman -Rns $(pacman -Qdtq) || echo "No orphans to remove."
