@@ -7,7 +7,7 @@ sudo ./root/enable-services.sh
 sudo ./root/mount-music.sh
 
 # User-level tasks
-./user/dotfiles.sh
+./user/desktop-dotfiles.sh
 ./user/suckless.sh
 ./user/desktop-dwmblocks.sh
 ./user/theme.sh
