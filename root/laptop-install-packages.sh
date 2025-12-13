@@ -51,7 +51,7 @@ sudo pacman -S --needed "${PRINTING_PKGS[@]}" || echo "WARNING: Some printing pa
 echo "Refreshing font cache..."
 fc-cache -fv
 
-echo "Installing Paru AUR helper..."
+echo "Installing Yay AUR helper..."
 mkdir -p /home/tristen/Downloads
 cd /home/tristen/Downloads
 sudo pacman -S --needed base-devel
