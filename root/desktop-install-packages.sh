@@ -77,7 +77,7 @@ makepkg -si
 cd /home/tristen/Downloads
 rm -rf paru
 
-paru -S vcvrack-bin dymo-cups-drivers gearlever vial-appimage winboat
+paru -S vcvrack-bin dymo-cups-drivers gearlever vial-appimage winboat proton-ge-custom-bin protonup-qt
 
 echo "Cleaning up..."
 sudo pacman -Rns $(pacman -Qdtq) || echo "No orphans to remove."
