@@ -30,7 +30,7 @@ AUDIOCTRL_PKGS=(mpd mpc playerctl ncmpcpp)
 
 GAMING_PKGS=(steam)
 
-DEV_PKGS=(tmux neovim jq hugo fzf ripgrep fd nodejs npm)
+DEV_PKGS=(tmux neovim jq hugo fzf ripgrep fd nodejs npm stylua)
 
 VM_PKGS=(qemu-desktop libvirt edk2-ovmf virt-manager)
 
@@ -64,7 +64,7 @@ sudo pacman -S --needed "${GAMING_PKGS[@]}" || echo "WARNING: Some gaming packag
 
 sudo pacman -S --needed "${DEV_PKGS[@]}" || echo "WARNING: Some web development packages could not be installed."
 
-sudo pacman -S --needed "{IMG_VID_PKGS}" || echo "WARNING: Some virtual machine packages could not be installed."
+sudo pacman -S --needed "${VM_PKGS[@]}" || echo "WARNING: Some virtual machine packages could not be installed."
 
 sudo pacman -S --needed "${PRINTING_PKGS[@]}" || echo "WARNING: Some printing packages could not be installed."
 
@@ -80,7 +80,6 @@ cd yay
 makepkg -si
 cd /home/tristen/Downloads
 rm -rf yay
-sudo rm -rf /home/tristen/go
 
 yay -S vcvrack-bin dymo-cups-drivers gearlever via-bin
 
