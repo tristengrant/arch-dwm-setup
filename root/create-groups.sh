@@ -2,7 +2,7 @@
 set -euo pipefail
 
 USER="tristen"
-GROUPS=(realtime video audio input lp)
+GROUPS=(video audio input lp)
 
 # Create groups if they don't exist
 for grp in "${GROUPS[@]}"; do

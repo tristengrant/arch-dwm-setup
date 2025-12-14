@@ -30,7 +30,9 @@ AUDIOCTRL_PKGS=(mpd mpc playerctl ncmpcpp)
 
 GAMING_PKGS=(steam)
 
-DEV_PKGS=(tmux neovim jq hugo fzf ripgrep fd)
+DEV_PKGS=(tmux neovim jq hugo fzf ripgrep fd nodejs npm)
+
+VM_PKGS=(qemu-desktop libvirt edk2-ovmf virt-manager)
 
 PRINTING_PKGS=(cups cups-pdf cups-filters system-config-printer avahi glabels)
 
@@ -62,6 +64,8 @@ sudo pacman -S --needed "${GAMING_PKGS[@]}" || echo "WARNING: Some gaming packag
 
 sudo pacman -S --needed "${DEV_PKGS[@]}" || echo "WARNING: Some web development packages could not be installed."
 
+sudo pacman -S --needed "{IMG_VID_PKGS}" || echo "WARNING: Some virtual machine packages could not be installed."
+
 sudo pacman -S --needed "${PRINTING_PKGS[@]}" || echo "WARNING: Some printing packages could not be installed."
 
 echo "Refreshing font cache..."
@@ -76,11 +80,21 @@ cd yay
 makepkg -si
 cd /home/tristen/Downloads
 rm -rf yay
-rm -rf ~/go
+sudo rm -rf /home/tristen/go
 
-yay -S vcvrack-bin dymo-cups-drivers gearlever via-bin winboat
+yay -S vcvrack-bin dymo-cups-drivers gearlever via-bin
 
 echo "Cleaning up..."
 sudo pacman -Rns $(pacman -Qdtq) || echo "No orphans to remove."
+
+echo "Adding user to kvm group for Virtual Machines..."
+sudo usermod -aG kvm tristen
+
+echo "Enabling libdirtd service for Virtual Machines..."
+sudo systemctl enable libvirtd
+
+echo "Starting virtual machine networks..."
+sudo virsh net-start default
+sudo virsh net-autostart default
 
 echo "Package installation complete!"
