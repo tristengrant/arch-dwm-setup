@@ -10,7 +10,7 @@ WM_PKGS=(libx11 libxft libxinerama libpulse alsa-lib libxrender libxcursor)
 
 IMG_VID_PKGS=(pcmanfm lf tumbler ffmpegthumbnailer zathura zathura-pdf-poppler gvfs mpv nsxiv)
 
-UTILITY_PKGS=(feh libnotify dunst brightnessctl cifs-utils smbclient lm_sensors polkit polkit-gnome acpi picom j4-dmenu-desktop htop fastfetch xdotool ufw)
+UTILITY_PKGS=(feh libnotify dunst brightnessctl cifs-utils smbclient lm_sensors polkit polkit-gnome acpi picom j4-dmenu-desktop htop fastfetch xdotool ufw xbindkeys xcape)
 
 FILE_PKGS=(filezilla syncthing colord reflector harper hunspell hunspell-en_ca p7zip tar unrar unzip file-roller scrot imagemagick xclip)
 
@@ -61,24 +61,9 @@ makepkg -si
 cd /home/tristen/Downloads
 rm -rf yay
 
-yay -S gearlever kanata-bin
+yay -S gearlever
 
 echo "Cleaning up..."
 sudo pacman -Rns $(pacman -Qdtq) || echo "No orphans to remove."
-
-# Setting up Kanata for keyboard remapping on Laptop
-sudo groupadd --system uinput
-sudo groupdel uinput
-sudo usermod -aG input $USER
-sudo usermod -aG uinput $USER
-mkdir -p /etc/udev/rules.d/
-
-# Writing udev rules for Kanata
-sudo cat <<EOF >"etc/udev/rules.d/99-input.rules"
-KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
-EOF
-
-# Reload udev rules
-sudo udevadm control --reload-rules && sudo udevadm trigger
 
 echo "Package installation complete!"
