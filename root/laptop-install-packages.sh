@@ -12,7 +12,7 @@ IMG_VID_PKGS=(pcmanfm lf tumbler ffmpegthumbnailer zathura zathura-pdf-poppler g
 
 UTILITY_PKGS=(feh libnotify dunst brightnessctl cifs-utils smbclient lm_sensors polkit polkit-gnome acpi picom j4-dmenu-desktop htop fastfetch xdotool ufw)
 
-FILE_PKGS=(filezilla syncthing colord reflector harper hunspell hunspell-en_ca p7zip tar unrar file-roller scrot imagemagick xclip)
+FILE_PKGS=(filezilla syncthing colord reflector harper hunspell hunspell-en_ca p7zip tar unrar unzip file-roller scrot imagemagick xclip)
 
 THEME_PKGS=(breeze-gtk breeze5 adwaita-icon-theme adwaita-cursors)
 
@@ -22,7 +22,7 @@ FIREFOX_PKGS=(firefox firefox-i18n-en-ca)
 
 AUDIOSTACK_PKGS=(pipewire pipewire-alsa pipewire-pulse wireplumber rtkit alsa-utils pavucontrol)
 
-DEV_PKGS=(tmux neovim jq hugo fzf ripgrep fd nodejs npm stylua)
+DEV_PKGS=(tmux neovim jq hugo fzf ripgrep fd nodejs npm)
 
 PRINTING_PKGS=(cups cups-pdf cups-filters system-config-printer avahi)
 
