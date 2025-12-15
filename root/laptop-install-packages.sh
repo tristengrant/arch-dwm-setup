@@ -10,7 +10,7 @@ WM_PKGS=(libx11 libxft libxinerama libpulse alsa-lib libxrender libxcursor)
 
 IMG_VID_PKGS=(pcmanfm lf tumbler ffmpegthumbnailer zathura zathura-pdf-poppler gvfs mpv nsxiv)
 
-UTILITY_PKGS=(feh libnotify dunst brightnessctl cifs-utils smbclient lm_sensors polkit polkit-gnome acpi picom j4-dmenu-desktop htop fastfetch xdotool ufw xbindkeys xcape)
+UTILITY_PKGS=(feh libnotify dunst brightnessctl cifs-utils smbclient lm_sensors polkit polkit-gnome acpi picom j4-dmenu-desktop htop fastfetch xdotool ufw xbindkeys xcape libqalculate)
 
 FILE_PKGS=(filezilla syncthing colord reflector harper hunspell hunspell-en_ca p7zip tar unrar unzip file-roller scrot imagemagick xclip)
 
