@@ -10,7 +10,6 @@ sudo ./root/mount-music.sh
 ./user/desktop-dotfiles.sh
 ./user/suckless.sh
 ./user/desktop-dwmblocks.sh
-./user/theme.sh
 
 sudo chown -R tristen:tristen /home/tristen/*
 

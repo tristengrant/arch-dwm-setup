@@ -4,20 +4,8 @@ set -euo pipefail
 USER="tristen"
 HOME_DIR="/home/$USER"
 
-mkdir -p "$HOME_DIR/.config"
-
-cat >"$HOME_DIR/.config/user-dirs.dirs" <<'EOF'
-XDG_DESKTOP_DIR="/home/tristen"
-XDG_DOCUMENTS_DIR="/home/tristen/Documents"
-XDG_DOWNLOAD_DIR="/home/tristen/Downloads"
-XDG_MUSIC_DIR="/home/tristen/Music"
-XDG_PICTURES_DIR="/home/tristen/Pictures"
-XDG_VIDEOS_DIR="/home/tristen/Videos"
-XDG_TEMPLATES_DIR="/home/tristen/"
-XDG_PUBLICSHARE_DIR="/home/tristen/"
-EOF
-
 echo "Making home directories..."
+mkdir -p "$HOME_DIR/.config"
 mkdir -p "$HOME_DIR/Documents"
 mkdir -p "$HOME_DIR/Documents/notes"
 mkdir -p "$HOME_DIR/Downloads"
@@ -31,39 +19,17 @@ mkdir -p "$HOME_DIR/.local/bin"
 mkdir -p "$HOME_DIR/.local/share/applications"
 mkdir -p "$HOME_DIR/.local/state"
 
-echo "Cloning and symlinking dotfiles..."
+echo "Cloning dotfiles..."
 cd "$HOME_DIR/Projects"
 [ -d "$HOME_DIR/Projects/dotfiles" ] || git clone https://github.com/tristengrant/dotfiles.git
-
-# In .config
-ln -sf "$HOME_DIR/Projects/dotfiles/config/mpv" "$HOME_DIR/.config/mpv"
-ln -sf "$HOME_DIR/Projects/dotfiles/config/mpd" "$HOME_DIR/.config/mpd"
-ln -sf "$HOME_DIR/Projects/dotfiles/config/dunst" "$HOME_DIR/.config/dunst"
-ln -sf "$HOME_DIR/Projects/dotfiles/config/picom" "$HOME_DIR/.config/picom"
-ln -sf "$HOME_DIR/Projects/dotfiles/config/nvim" "$HOME_DIR/.config/nvim"
-ln -sf "$HOME_DIR/Projects/dotfiles/config/tmux" "$HOME_DIR/.config/tmux"
-ln -sf "$HOME_DIR/Projects/dotfiles/config/gtk-3.0" "$HOME_DIR/.config/gtk-3.0"
-ln -sf "$HOME_DIR/Projects/dotfiles/config/gtk-4.0" "$HOME_DIR/.config/gtk-4.0"
-ln -sf "$HOME_DIR/Projects/dotfiles/config/ncmpcpp" "$HOME_DIR/.config/ncmpcpp"
-ln -sf "$HOME_DIR/Projects/dotfiles/config/pcmanfm" "$HOME_DIR/.config/pcmanfm"
-ln -sf "$HOME_DIR/Projects/dotfiles/config/qalculate" "$HOME_DIR/.config/qalculate"
-ln -sf "$HOME_DIR/Projects/dotfiles/config/zathura" "$HOME_DIR/.config/zathura"
-ln -sf "$HOME_DIR/Projects/dotfiles/config/user-dirs.dirs" "$HOME_DIR/.config/user-dirs.dirs"
-
-# In home directory
-ln -sf "$HOME_DIR/Projects/dotfiles/desktop_dot_xinitrc" "$HOME_DIR/.xinitrc"
-ln -sf "$HOME_DIR/Projects/dotfiles/dot_bashrc" "$HOME_DIR/.bashrc"
-ln -sf "$HOME_DIR/Projects/dotfiles/dot_bash_profile" "$HOME_DIR/.bash_profile"
-ln -sf "$HOME_DIR/Projects/dotfiles/dot_xprofile" "$HOME_DIR/.xprofile"
-ln -sf "$HOME_DIR/Projects/dotfiles/dot_Xresources" "$HOME_DIR/.Xresources"
-
-# Telekasten NeoVim Plugin Templates
-ln -sf "$HOME_DIR/Projects/dotfiles/telekasten-nvim/templates" "$HOME_DIR/Documents/notes"
-
-source /home/tristen/.bashrc
 
 echo "Cloning scripts repo..."
 cd "$HOME_DIR/Projects"
 [ -d "$HOME_DIR/Projects/scripts" ] || git clone https://github.com/tristengrant/scripts.git
 
+echo "Symlinking dotfiles..."
+cd "$HOME_DIR/Projects/scripts"
+./desktop_symlink_dotfiles
+
+source /home/tristen/.bashrc
 chmod +x /home/tristen/.xinitrc

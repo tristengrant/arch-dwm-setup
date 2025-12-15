@@ -9,7 +9,6 @@ sudo ./root/enable-services.sh
 ./user/laptop-dotfiles.sh
 ./user/suckless.sh
 ./user/laptop-dwmblocks.sh
-./user/theme.sh
 
 sudo chown -R tristen:tristen /home/tristen/*
 
