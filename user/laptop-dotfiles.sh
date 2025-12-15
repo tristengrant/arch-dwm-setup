@@ -50,10 +50,6 @@ ln -sf "$HOME_DIR/Projects/dotfiles/dot_bashrc" "$HOME_DIR/.bashrc"
 ln -sf "$HOME_DIR/Projects/dotfiles/dot_bash_profile" "$HOME_DIR/.bash_profile"
 ln -sf "$HOME_DIR/Projects/dotfiles/dot_xprofile" "$HOME_DIR/.xprofile"
 
-# In .local/share/applications
-ln -sf "$HOME_DIR/Projects/dotfiles/local/share/application/nsxiv.desktop" "$HOME_DIR/.local/share/applications/nsxiv.desktop"
-ln -sf "$HOME_DIR/Projects/dotfiles/local/share/applications/neovim.desktop" "$HOME_DIR/.local/share/applications/neovim.desktop"
-
 # Telekasten NeoVim Plugin Templates
 ln -sf "$HOME_DIR/Projects/dotfiles/telekasten-nvim/templates" "$HOME_DIR/Documents/notes"
 
