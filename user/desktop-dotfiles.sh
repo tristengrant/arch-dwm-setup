@@ -42,6 +42,13 @@ ln -sf "$HOME_DIR/Projects/dotfiles/config/dunst" "$HOME_DIR/.config/dunst"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/picom" "$HOME_DIR/.config/picom"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/nvim" "$HOME_DIR/.config/nvim"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/tmux" "$HOME_DIR/.config/tmux"
+ln -sf "$HOME_DIR/Projects/dotfiles/config/gtk-3.0" "$HOME_DIR/.config/gtk-3.0"
+ln -sf "$HOME_DIR/Projects/dotfiles/config/gtk-4.0" "$HOME_DIR/.config/gtk-4.0"
+ln -sf "$HOME_DIR/Projects/dotfiles/config/ncmpcpp" "$HOME_DIR/.config/ncmpcpp"
+ln -sf "$HOME_DIR/Projects/dotfiles/config/pcmanfm" "$HOME_DIR/.config/pcmanfm"
+ln -sf "$HOME_DIR/Projects/dotfiles/config/qalculate" "$HOME_DIR/.config/qalculate"
+ln -sf "$HOME_DIR/Projects/dotfiles/config/zathura" "$HOME_DIR/.config/zathura"
+ln -sf "$HOME_DIR/Projects/dotfiles/config/user-dirs.dirs" "$HOME_DIR/.config/user-dirs.dirs"
 
 # In home directory
 ln -sf "$HOME_DIR/Projects/dotfiles/desktop_dot_xinitrc" "$HOME_DIR/.xinitrc"
