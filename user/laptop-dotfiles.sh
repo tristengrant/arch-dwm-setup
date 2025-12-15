@@ -42,13 +42,13 @@ ln -sf "$HOME_DIR/Projects/dotfiles/config/dunst" "$HOME_DIR/.config/dunst"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/picom" "$HOME_DIR/.config/picom"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/nvim" "$HOME_DIR/.config/nvim"
 ln -sf "$HOME_DIR/Projects/dotfiles/config/tmux" "$HOME_DIR/.config/tmux"
-ln -sf "$HOME_DIR/Projects/dotfiles/config/nsxiv" "$HOME_DIR/.config/nsxiv"
 
 # In home directory
 ln -sf "$HOME_DIR/Projects/dotfiles/laptop_dot_xinitrc" "$HOME_DIR/.xinitrc"
 ln -sf "$HOME_DIR/Projects/dotfiles/dot_bashrc" "$HOME_DIR/.bashrc"
 ln -sf "$HOME_DIR/Projects/dotfiles/dot_bash_profile" "$HOME_DIR/.bash_profile"
 ln -sf "$HOME_DIR/Projects/dotfiles/dot_xprofile" "$HOME_DIR/.xprofile"
+ln -sf "$HOME_DIR/Projects/dotfiles/dot_Xresources" "$HOME_DIR/.Xresources"
 
 # Telekasten NeoVim Plugin Templates
 ln -sf "$HOME_DIR/Projects/dotfiles/telekasten-nvim/templates" "$HOME_DIR/Documents/notes"
