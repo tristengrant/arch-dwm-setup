@@ -8,11 +8,11 @@ BASE_PKGS=(base-devel xorg-server xorg-xinit xorg-xrandr xorg-xinput xdg-user-di
 
 WM_PKGS=(libx11 libxft libxinerama libpulse alsa-lib libxrender libxcursor)
 
-IMG_VID_PKGS=(pcmanfm lf tumbler ffmpegthumbnailer zathura zathura-pdf-poppler gvfs mpv nsxiv)
+IMG_VID_PKGS=(pcmanfm lf tumbler ffmpegthumbnailer zathura zathura-pdf-poppler gvfs mpv)
 
 UTILITY_PKGS=(feh libnotify dunst brightnessctl cifs-utils smbclient lm_sensors polkit polkit-gnome acpi picom j4-dmenu-desktop htop fastfetch xdotool ufw libqalculate)
 
-FILE_PKGS=(filezilla syncthing displaycal colord reflector harper hunspell hunspell-en_ca p7zip tar unrar unzip file-roller scrot imagemagick xclip)
+FILE_PKGS=(filezilla syncthing displaycal colord reflector hunspell hunspell-en_ca p7zip tar unrar unzip file-roller scrot imagemagick xclip)
 
 THEME_PKGS=(breeze-gtk breeze5 adwaita-icon-theme adwaita-cursors)
 
