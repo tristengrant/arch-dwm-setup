@@ -6,7 +6,7 @@ echo "Installing packages..."
 
 BASE_PKGS=(base-devel xorg-server xorg-xinit xorg-xrandr xorg-xinput xdg-user-dirs)
 
-WM_PKGS=(libx11 libxft libxinerama libpulse alsa-lib libxrender libxcursor)
+WM_PKGS=(libx11 libxft libxinerama libpulse alsa-lib libxrender libxcursor libxrandr libxcomposite libxdamage libxfixes xcb-util xcb-util-wm xcb-util-image xcb-util-keysyms)
 
 IMG_VID_PKGS=(pcmanfm lf tumbler ffmpegthumbnailer zathura zathura-pdf-poppler gvfs mpv)
 
