@@ -29,7 +29,7 @@ cd "$HOME_DIR/Projects"
 
 echo "Symlinking dotfiles..."
 cd "$HOME_DIR/Projects/scripts"
-./desktop_symlink_dotfiles
+./laptop_symlink_dotfiles
 
 source /home/tristen/.bashrc
 chmod +x /home/tristen/.xinitrc
