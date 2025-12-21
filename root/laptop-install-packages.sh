@@ -18,8 +18,6 @@ THEME_PKGS=(breeze-gtk breeze5 adwaita-icon-theme adwaita-cursors)
 
 FONT_PKGS=(woff2-font-awesome noto-fonts-emoji ttf-noto-nerd ttf-jetbrains-mono-nerd)
 
-FIREFOX_PKGS=(firefox firefox-i18n-en-ca)
-
 AUDIOSTACK_PKGS=(pipewire pipewire-alsa pipewire-pulse wireplumber rtkit alsa-utils pavucontrol)
 
 DEV_PKGS=(tmux neovim jq hugo fzf ripgrep fd nodejs npm)
@@ -40,8 +38,6 @@ sudo pacman -S --needed "${THEME_PKGS[@]}" || echo "WARNING: Some theme packages
 
 sudo pacman -S --needed "${FONT_PKGS[@]}" || echo "WARNING: Some font packages could not be installed."
 
-sudo pacman -S --needed "${FIREFOX_PKGS[@]}" || echo "WARNING: Some firefox packages could not be installed."
-
 sudo pacman -S --needed "${AUDIOSTACK_PKGS[@]}" || echo "WARNING: Some audio stack packages ould not be installed."
 
 sudo pacman -S --needed "${DEV_PKGS[@]}" || echo "WARNING: Some web development packages could not be installed."
@@ -61,7 +57,7 @@ makepkg -si
 cd /home/tristen/Downloads
 rm -rf yay
 
-yay -S gearlever
+yay -S gearlever librewolf-bin
 
 echo "Cleaning up..."
 sudo pacman -Rns $(pacman -Qdtq) || echo "No orphans to remove."

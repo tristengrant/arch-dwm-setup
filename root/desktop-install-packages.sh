@@ -18,8 +18,6 @@ THEME_PKGS=(breeze-gtk breeze5 adwaita-icon-theme adwaita-cursors)
 
 FONT_PKGS=(woff2-font-awesome noto-fonts-emoji ttf-noto-nerd ttf-jetbrains-mono-nerd)
 
-FIREFOX_PKGS=(firefox firefox-i18n-en-ca)
-
 AUDIOSTACK_PKGS=(pipewire pipewire-jack pipewire-alsa pipewire-pulse wireplumber rtkit alsa-utils pavucontrol)
 
 DRAWING_PKGS=(inkscape gimp scribus libwacom xf86-input-wacom)
@@ -50,8 +48,6 @@ sudo pacman -S --needed "${THEME_PKGS[@]}" || echo "WARNING: Some theme packages
 
 sudo pacman -S --needed "${FONT_PKGS[@]}" || echo "WARNING: Some font packages could not be installed."
 
-sudo pacman -S --needed "${FIREFOX_PKGS[@]}" || echo "WARNING: Some firefox packages could not be installed."
-
 sudo pacman -S --needed "${AUDIOSTACK_PKGS[@]}" || echo "WARNING: Some audio stack packages ould not be installed."
 
 sudo pacman -S --needed "${DRAWING_PKGS[@]}" || echo "WARNING: Some drawing packages could not be installed."
@@ -81,7 +77,7 @@ makepkg -si
 cd /home/tristen/Downloads
 rm -rf yay
 
-yay -S vcvrack-bin dymo-cups-drivers gearlever via-bin
+yay -S vcvrack-bin dymo-cups-drivers gearlever via-bin librewolf-bin
 
 echo "Cleaning up..."
 sudo pacman -Rns $(pacman -Qdtq) || echo "No orphans to remove."
