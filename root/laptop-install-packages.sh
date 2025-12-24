@@ -4,7 +4,7 @@ sudo pacman -Syu --noconfirm
 
 echo "Installing packages..."
 
-BASE_PKGS=(base-devel xorg-server xorg-xinit xorg-xrandr xorg-xinput xdg-user-dirs)
+BASE_PKGS=(base-devel xorg-server xorg-xinit xorg-xrandr xorg-xinput xdg-user-dirs gcr)
 
 WM_PKGS=(libx11 libxft libxinerama libpulse alsa-lib libxrender libxcursor)
 
