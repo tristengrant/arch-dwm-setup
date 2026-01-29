@@ -26,9 +26,11 @@ RECORDING_PKGS=(reaper reapack lsp-plugins-vst3 qpwgraph)
 
 AUDIOCTRL_PKGS=(mpd mpc playerctl ncmpcpp)
 
+BROWSER_PKGS=(firefox firefox-i18n-en-ca)
+
 GAMING_PKGS=(steam)
 
-DEV_PKGS=(tmux neovim jq hugo fzf ripgrep fd nodejs npm)
+DEV_PKGS=(neovim jq hugo fzf ripgrep fd nodejs npm wezterm)
 
 VM_PKGS=(qemu-desktop libvirt edk2-ovmf virt-manager)
 
@@ -58,6 +60,8 @@ sudo pacman -S --needed "${AUDIOCTRL_PKGS[@]}" || echo "WARNING: Some audio cont
 
 sudo pacman -S --needed "${GAMING_PKGS[@]}" || echo "WARNING: Some gaming packages could not be installed."
 
+sudo pacman -S --needed "${BROWSER_PKGS[@]}" || echo "WARNING: Some browser packages could not be installed."
+
 sudo pacman -S --needed "${DEV_PKGS[@]}" || echo "WARNING: Some web development packages could not be installed."
 
 sudo pacman -S --needed "${VM_PKGS[@]}" || echo "WARNING: Some virtual machine packages could not be installed."
@@ -77,7 +81,7 @@ makepkg -si
 cd /home/tristen/Downloads
 rm -rf yay
 
-yay -S vcvrack-bin dymo-cups-drivers gearlever via-bin librewolf-bin
+yay -S vcvrack-bin dymo-cups-drivers appimagelauncher via-bin
 
 echo "Cleaning up..."
 sudo pacman -Rns $(pacman -Qdtq) || echo "No orphans to remove."

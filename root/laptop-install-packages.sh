@@ -20,7 +20,9 @@ FONT_PKGS=(woff2-font-awesome noto-fonts-emoji ttf-noto-nerd ttf-jetbrains-mono-
 
 AUDIOSTACK_PKGS=(pipewire pipewire-alsa pipewire-pulse wireplumber rtkit alsa-utils pavucontrol)
 
-DEV_PKGS=(tmux neovim jq hugo fzf ripgrep fd nodejs npm)
+BROWSER_PKGS=(firefox firefox-i18n-en-ca)
+
+DEV_PKGS=(neovim jq hugo fzf ripgrep fd nodejs npm wezterm)
 
 PRINTING_PKGS=(cups cups-pdf cups-filters system-config-printer avahi)
 
@@ -38,7 +40,9 @@ sudo pacman -S --needed "${THEME_PKGS[@]}" || echo "WARNING: Some theme packages
 
 sudo pacman -S --needed "${FONT_PKGS[@]}" || echo "WARNING: Some font packages could not be installed."
 
-sudo pacman -S --needed "${AUDIOSTACK_PKGS[@]}" || echo "WARNING: Some audio stack packages ould not be installed."
+sudo pacman -S --needed "${AUDIOSTACK_PKGS[@]}" || echo "WARNING: Some audio stack packages could not be installed."
+
+sudo pacman -S --needed "${BROWSER_PKGS[@]}" || echo "WARNING: Some browser packages could not be installed."
 
 sudo pacman -S --needed "${DEV_PKGS[@]}" || echo "WARNING: Some web development packages could not be installed."
 
@@ -57,7 +61,7 @@ makepkg -si
 cd /home/tristen/Downloads
 rm -rf yay
 
-yay -S gearlever librewolf-bin
+yay -S appimagelauncher
 
 echo "Cleaning up..."
 sudo pacman -Rns $(pacman -Qdtq) || echo "No orphans to remove."
