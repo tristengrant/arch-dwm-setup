@@ -22,7 +22,7 @@ AUDIOSTACK_PKGS=(pipewire pipewire-alsa pipewire-pulse wireplumber rtkit alsa-ut
 
 BROWSER_PKGS=(firefox firefox-i18n-en-ca)
 
-DEV_PKGS=(neovim jq hugo fzf ripgrep fd nodejs npm wezterm)
+DEV_PKGS=(neovim jq hugo fzf ripgrep fd nodejs npm alacritty)
 
 PRINTING_PKGS=(cups cups-pdf cups-filters system-config-printer avahi)
 

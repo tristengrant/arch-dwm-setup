@@ -30,7 +30,7 @@ BROWSER_PKGS=(firefox firefox-i18n-en-ca)
 
 GAMING_PKGS=(steam)
 
-DEV_PKGS=(neovim jq hugo fzf ripgrep fd nodejs npm wezterm)
+DEV_PKGS=(neovim jq hugo fzf ripgrep fd nodejs npm alacritty)
 
 VM_PKGS=(qemu-desktop libvirt edk2-ovmf virt-manager)
 
