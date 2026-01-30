@@ -11,3 +11,6 @@ sudo ufw allow 443/tcp
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw enable
+
+echo "Disabling loud beep sound..."
+echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf
